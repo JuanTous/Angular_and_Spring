@@ -1,0 +1,75 @@
+<nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+  <!-- Navbar Brand-->
+  <a class="navbar-brand ps-3" routerLink="/home">
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png"
+      alt="Angular" width="25">
+    <img src="https://avatars.githubusercontent.com/u/317776?s=200&v=4" alt="Spring" width="25">
+    Angular&Spring
+  </a>
+  <!-- Sidebar Toggle-->
+
+  <!-- Navbar Search-->
+  <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+  </form>
+  <!-- Navbar-->
+  <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+    <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle"><i
+      class="fas fa-bars"></i></button>
+  </ul>
+</nav>
+<div id="layoutSidenav">
+  <div id="layoutSidenav_nav">
+    <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+      <div class="sb-sidenav-menu">
+        <div class="nav">
+          <div class="sb-sidenav-menu-heading">Tablero</div>
+          <a class="nav-link" routerLink="/home">
+            <div class="sb-nav-link-icon"><i class="fas fa-home"></i></div>
+            Inicio
+          </a>
+          <div class="sb-sidenav-menu-heading">Componentes</div>
+          <a class="nav-link" routerLink="/users">
+            <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
+            Usuarios
+          </a>
+
+        </div>
+      </div>
+      <div class="sb-sidenav-footer">
+        <div class="small">Creado por:</div>
+        Juan Sebastián Tous Triana
+      </div>
+    </nav>
+  </div>
+  <div id="layoutSidenav_content">
+    <main>
+      <div class="container-fluid px-4">
+
+        <!--Aquí se renderizan las operaciones CRUD de cada tabla-->
+        <router-outlet></router-outlet>
+        <!--Aquí se renderizan las operaciones CRUD de cada tabla-->
+
+
+      </div>
+    </main>
+    <footer class="py-4 mt-auto" [ngStyle]="{'background-color': '#343a40'}">
+      <div class="container-fluid px-4">
+        <div class="d-flex align-items-center justify-content-between small text-muted">
+          <div class="">Copyright &copy; Your Website 2022</div>
+          <div class="">
+            <a href="https://www.facebook.com/tousjuan01/" target="blank"><i class="fab fa-facebook text-muted"></i></a>
+            &middot;
+            <a href="https://wa.me/573505378802" target="blank"><i class="fab fa-whatsapp text-muted"></i></a>
+            &middot;
+            <a href="https://www.instagram.com/tous10/" target="blank"><i class="fab fa-instagram text-muted"></i></a>
+            &middot;
+            <a href="https://twitter.com/JuanTousT" target="blank"><i class="fab fa-twitter text-muted"></i></a>
+            &middot;
+            <a href="https://github.com/JuanTous" target="blank"><i class="fab fa-github text-muted"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>

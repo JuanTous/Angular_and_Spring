@@ -1,0 +1,75 @@
+<ng-container [ngSwitch]="type">
+    <div *ngSwitchCase="'edit'" class="modal fade" id="modalEdit" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content bg-dark">
+                <div class="modal-header text-center justify-content-center">
+                    <h5 class="modal-title text-uppercase text-light overflow-auto">
+                        Editar
+                    </h5>
+                </div>
+                <div class="modal-body">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" [(ngModel)]="user.nombres">
+                        <label for="floatingTitle">Nombres</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" [(ngModel)]="user.apellidos">
+                        <label for="floatingTitle">Apellidos</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="number" class="form-control" [(ngModel)]="user.edad">
+                        <label for="floatingTitle">Edad</label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal"
+                        (click)=sendData()>Guardar</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div *ngSwitchCase="'add'" class="modal fade" id="modalAdd" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content bg-dark">
+                <div class="modal-header text-center justify-content-center">
+                    <h5 class="modal-title text-uppercase text-light overflow-auto">Nuevo usuario</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" [(ngModel)]="user.nombres">
+                        <label for="floatingTitle">Nombres</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" [(ngModel)]="user.apellidos">
+                        <label for="floatingTitle">Apellidos</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="number" class="form-control" [(ngModel)]="user.edad">
+                        <label for="floatingTitle">Edad</label>
+                    </div>
+                    <div class="form-floating text-center mb-3">
+                        <div class="form-check form-check-inline text-light">
+                            <input class="form-check-input" type="radio" [(ngModel)]="user.sexo" name="sexo"
+                                value="Masculino">
+                            <label class="form-check-label" for="inlineRadio1">Masculino</label>
+                        </div>
+                        <div class="form-check form-check-inline text-light">
+                            <input class="form-check-input" type="radio" [(ngModel)]="user.sexo" name="sexo"
+                                value="Femenino">
+                            <label class="form-check-label" for="inlineRadio2">Femenino</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal"
+                        (click)=sendData()>Crear</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-container>

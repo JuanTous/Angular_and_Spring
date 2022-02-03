@@ -1,0 +1,9 @@
+#layoutSidenav_content {
+    background-image: repeating-linear-gradient(
+        90deg,
+        #ffffff 0px,
+        #ffffff 0px,
+        #b1e0ff 170px,
+        #b1e0ff 210px
+    );
+}

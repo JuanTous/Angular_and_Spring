@@ -1,0 +1,16 @@
+.container-fluid.p-5.text-white {
+    background-color: black;
+    opacity: .9;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-style: solid;
+    border-bottom-width: thick;
+    border-bottom-color: darkslategray;
+}
+
+.container.py-sm-4 {
+    background-color: #7C7B8D;
+    opacity: .95;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}

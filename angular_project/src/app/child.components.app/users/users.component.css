@@ -1,0 +1,12 @@
+tbody tr {
+    cursor: crosshair
+}
+
+.table-responsive {
+    max-height: 36rem;
+        border-radius: .5rem;
+}
+
+.modal-footer {
+    justify-content: space-between;
+}
